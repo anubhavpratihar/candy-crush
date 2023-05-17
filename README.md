@@ -20,7 +20,7 @@ Earn points by making matches and try to achieve a high score.
 Feel free to modify and enhance the game as per your preferences. Enjoy playing Candy Crush!
 
 Preview:
-Candy Crush Game Preview : https://85isjz.csb.app/
+ https://85isjz.csb.app/
 
 Credits:
 This game was created by Anubhav Pratihar.
