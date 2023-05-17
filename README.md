@@ -1,32 +1,26 @@
-# Candy Crush in React
+Candy Crush Game
+This is a simplified version of the popular game Candy Crush implemented using React.js. The game involves swapping adjacent candies to create matches and earn points.
 
-This project is in support of the tutorial found [here](https://www.youtube.com/watch?v=PBrEq9Wd6_U)
+Features:
+Utilizes React.js for building the user interface and managing the game state.
+Implements drag-and-drop functionality to swap candies on the game board.
+Supports multiple candy colors, represented by images.
+Tracks and displays the player's score using the ScoreBoard component.
+Automatically checks for matches of three or more candies in a row or column.
+Clears matched candies from the board and updates the score accordingly.
+Moves candies down to fill empty spaces when matches are made.
+Generates a random initial arrangement of candies for each game session.
+Usage:
+Clone the repository and navigate to the project directory.
+Install the necessary dependencies by running npm install or yarn install.
+Start the development server with npm start or yarn start.
+Open the game in a web browser at http://localhost:3000.
+Drag and drop candies to swap them and create matches.
+Earn points by making matches and try to achieve a high score.
+Feel free to modify and enhance the game as per your preferences. Enjoy playing Candy Crush!
 
-### To Start This Project
+Preview:
+Candy Crush Game Preview : https://85isjz.csb.app/
 
-### `npm i`
-
-Install all the packages you need by running the command in your terminal.
-
-In the project directory, you can run:
-
-### `npm run start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-
-### MIT Licence
-
-Copyright (c) 2020 Ania Kubow
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*Translation: Ofcourse you can use this for you project! Just make sure to say where you got this from :)
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Credits:
+This game was created by Anubhav Pratihar.
