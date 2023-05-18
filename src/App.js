@@ -143,10 +143,11 @@ const App = () => {
       squareBeingReplaced.getAttribute('data-id')
     );
 
-    currentColorArrangement[squareBeingReplacedId] = squareBeingDragged.getAttribute(
+    const updatedColorArrangement = [...currentColorArrangement];
+    updatedColorArrangement[squareBeingReplacedId] = squareBeingDragged.getAttribute(
       'src'
     );
-    currentColorArrangement[squareBeingDraggedId] = squareBeingReplaced.getAttribute(
+    updatedColorArrangement[squareBeingDraggedId] = squareBeingReplaced.getAttribute(
       'src'
     );
 
@@ -172,12 +173,7 @@ const App = () => {
       setSquareBeingDragged(null);
       setSquareBeingReplaced(null);
     } else {
-      currentColorArrangement[squareBeingReplacedId] = squareBeingReplaced.getAttribute(
-        'src'
-      );
-      currentColorArrangement[squareBeingDraggedId] = squareBeingDragged.getAttribute(
-        'src'
-      );
+      setCurrentColorArrangement(updatedColorArrangement);
       setSquareBeingDragged(null);
       setSquareBeingReplaced(null);
     }
@@ -191,24 +187,35 @@ const App = () => {
     checkForRowOfThree,
   ]);
 
+  const createBoard = () => {
+    const randomColorArrangement = candyColors.map((color) => {
+      const randomColor = Math.floor(Math.random() * color.length);
+      return color[randomColor];
+    });
+
+    setCurrentColorArrangement(randomColorArrangement);
+  };
+
+  useEffect(() => {
+    createBoard();
+  }, []);
+
   useEffect(() => {
     const timer = setInterval(() => {
       moveIntoSquareBelow();
-      checkForRowOfFour();
       checkForColumnOfFour();
-      checkForRowOfThree();
+      checkForRowOfFour();
       checkForColumnOfThree();
+      checkForRowOfThree();
     }, 100);
 
-    return () => {
-      clearInterval(timer);
-    };
+    return () => clearInterval(timer);
   }, [
+    moveIntoSquareBelow,
     checkForColumnOfFour,
     checkForRowOfFour,
     checkForColumnOfThree,
     checkForRowOfThree,
-    moveIntoSquareBelow,
   ]);
 
   return (
@@ -221,7 +228,7 @@ const App = () => {
             src={color}
             alt={color}
             data-id={index}
-            draggable={true}
+            draggable="true"
             onDragStart={dragStart}
             onDragOver={(e) => e.preventDefault()}
             onDragEnter={(e) => e.preventDefault()}
